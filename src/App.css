@@ -222,6 +222,7 @@ Copy code
   height: 65px !important;
   margin-top: 8px !important;
   border-radius: 20px 0px 0px 20px !important;
+  box-shadow: 0 0 8px 4px hsla(0, 0%, 84%, 0.5) !important;
 }
 .githubFinder {
   background-color: #325834 !important;
@@ -241,10 +242,11 @@ Copy code
   font-size: 20px !important;
 }
 ::placeholder {
-  color: white !important;
+  color: black !important;
 }
 .serchBut {
   height: 66.6px !important;
+  box-shadow: 0 0 8px 4px hsla(0, 0%, 84%, 0.5) !important;
   width: 130px !important;
   border-radius: 0px !important;
   font-weight: bold !important;

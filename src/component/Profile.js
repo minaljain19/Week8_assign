@@ -16,9 +16,8 @@ import { Outlet, Link, Navigate } from "react-router-dom";
 import git from "../git.png";
 function profile(props) {
   const { apiData, repo } = props;
-  console.log("my data", apiData);
-  console.log("repo", repo);
-
+  // console.log("my data", apiData);
+  // console.log("repo", repo);
   return (
     <>
       <Grid className="githubFinder">
@@ -53,7 +52,7 @@ function profile(props) {
             <Stack direction="row" spacing={1}>
               <Chip label={apiData.followers + " Follwers"} color="primary" />
               <Chip label={apiData.following + " Following"} color="error" />
-              <Chip label="10 Repo" color="warning" />
+              <Chip label={ repo.length +" Repo"} color="warning" />
             </Stack>
             {/* <Typography className="name">Github - minal@github.com</Typography> */}
             <a href={apiData.html_url} target="_blank">
@@ -67,7 +66,7 @@ function profile(props) {
           <Typography variant="h5" className="latest">
             Latest Repository
           </Typography>
-          {/* {repo.length > 0 ? (
+          {repo.length > 0 ? (
             repo?.map((item, index) => (
               <Link to={item.clone_url} className="linkRepo" target="_blank">
               <Grid sm="12" md="12" xs="12" className="repo">
@@ -101,7 +100,7 @@ function profile(props) {
             ))
           ) : (
             <h1>User Not Found </h1>
-          )} */}
+          )}
         </Grid>
       </Grid>
     </>
