@@ -37,21 +37,14 @@ function Users(props) {
       getItem(user);
     }, 2000);
   }
-  // console.log("user", user);
-  // console.log("par api data", apiData);
-  // console.log("my data", selectedData);
-  // console.log("DF",selectedData.length)
 
-  // useEffect(()=>{
-  // getItem("RajashekarRaju");
-  // },[])
-  useEffect(()=>{
-    setEmpty()
-  },[user])
+  useEffect(() => {
+    setEmpty();
+  }, [user]);
   return (
     <>
       <Grid className="githubFinder">
-        <Typography>
+        <Typography className="gitN">
           {" "}
           <img src={git} className="logo" /> Github Finder
         </Typography>

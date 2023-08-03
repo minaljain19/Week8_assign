@@ -16,8 +16,7 @@ import { Outlet, Link, Navigate } from "react-router-dom";
 import git from "../git.png";
 function profile(props) {
   const { apiData, repo } = props;
-  // console.log("my data", apiData);
-  // console.log("repo", repo);
+
   return (
     <>
       <Grid className="githubFinder">
@@ -52,14 +51,14 @@ function profile(props) {
             <Stack direction="row" spacing={1}>
               <Chip label={apiData.followers + " Follwers"} color="primary" />
               <Chip label={apiData.following + " Following"} color="error" />
-              <Chip label={ repo.length +" Repo"} color="warning" />
+              <Chip label={repo.length + " Repo"} color="warning" />
             </Stack>
             {/* <Typography className="name">Github - minal@github.com</Typography> */}
-            <a href={apiData.html_url} target="_blank">
+            <Link to={apiData.html_url} target="_blank">
               <Button variant="contained" className="profileBut">
                 Github Profile
               </Button>
-            </a>
+            </Link>
           </Grid>
         </Grid>
         <Grid container className="box21" sm="8" md="8" xs="10">
@@ -69,34 +68,36 @@ function profile(props) {
           {repo.length > 0 ? (
             repo?.map((item, index) => (
               <Link to={item.clone_url} className="linkRepo" target="_blank">
-              <Grid sm="12" md="12" xs="12" className="repo">
-                <Typography className="repoName">
-                  {item?.name+" " }
-                  {item.privete == "true"?(
-                  <Chip size="small" label="private" color="primary" />
-                  ):(
-                  <Chip size="small" label="Public" color="primary" />)}
-                </Typography>
-                <Typography className="date">
-                  Created at - {item.created_at}
-                </Typography>
-                <Typography className="repoDes">{item?.description}</Typography>
-                <Stack direction="row" spacing={1}>
-                  <Chip
-                    icon={<VisibilityIcon />}
-                    label={item.watchers_count}
-                    color="error"
-                  />
-                  <Chip
-                    icon={<StarIcon />}
-                    label={item.stargazers_count}
-                    color="secondary"
-                  />
-                  <Chip label={item.forks + " forks"} color="warning" />
-                </Stack>
-              </Grid>
+                <Grid sm="12" md="12" xs="12" className="repo">
+                  <Typography className="repoName">
+                    {item?.name + " "}
+                    {item.privete == "true" ? (
+                      <Chip size="small" label="private" color="primary" />
+                    ) : (
+                      <Chip size="small" label="Public" color="primary" />
+                    )}
+                  </Typography>
+                  <Typography className="date">
+                    Created at - {item.created_at}
+                  </Typography>
+                  <Typography className="repoDes">
+                    {item?.description}
+                  </Typography>
+                  <Stack direction="row" spacing={1}>
+                    <Chip
+                      icon={<VisibilityIcon />}
+                      label={item.watchers_count}
+                      color="error"
+                    />
+                    <Chip
+                      icon={<StarIcon />}
+                      label={item.stargazers_count}
+                      color="secondary"
+                    />
+                    <Chip label={item.forks + " forks"} color="warning" />
+                  </Stack>
+                </Grid>
               </Link>
-            
             ))
           ) : (
             <h1>User Not Found </h1>
