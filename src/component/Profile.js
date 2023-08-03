@@ -71,13 +71,7 @@ function profile(props) {
             repo?.map((item, index) => (
               <Link to={item.clone_url} className="linkRepo" target="_blank">
               <Grid sm="12" md="12" xs="12" className="repo">
-                <Typography className="repoName">
-                  {item?.name+" " }
-                  {item.privete == "true"?(
-                  <Chip size="small" label="private" color="primary" />
-                  ):(
-                  <Chip size="small" label="Public" color="primary" />)}
-                </Typography>
+               
                 <Typography className="date">
                   Created at - {item.created_at}
                 </Typography>
