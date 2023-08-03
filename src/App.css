@@ -1,38 +1,262 @@
-.App {
-  text-align: center;
+body {
+  padding-bottom: 0px !important;
+  margin-bottom: 0px;
+  /* background: #325834 !important; */
+}
+.mainBox {
+  /* background-color: #e3e3e3 !important; */
+  text-align: center !important;
+  padding: 28px !important;
+  margin-top: 60px !important;
+  /* height: 10px !important; */
+  margin-bottom: 0px !important;
+}
+.profilelImg {
+  height: 250px;
+  width: 250px;
+  border-radius: 10px;
+}
+.profileBox1 {
+  padding: 10px !important;
+}
+.profileBox2 {
+  padding: 10px;
+  /* padding-left: 50px !important; */
+}
+.loc {
+  margin-top: 13px !important;
+  margin-bottom: 13px !important;
+  font-weight: bold !important;
+}
+.profileBut {
+  /* color: black !important; */
+  margin-top: 19px !important;
+  color: black !important;
+  height: 47px !important;
+  color: white !important;
+  background-color: #325834 !important;
+  border-radius: 10px !important ;
+}
+.profileName {
+  color: black !important;
+  font-weight: bold;
+  font-size: 25px !important;
+}
+.linkRepo {
+  display: contents !important;
+}
+.err{
+      margin: 0px auto !important; 
+    font-size: 25px !important;
+    margin-top: 49px !important;
+    font-weight: bold !important;
+}
+.mainBox1 {
+  /* margin: 0px auto !important; */
+  background-color: white !important;
+  margin-left: 34px;
+  margin-top: -150px !important;
+  height: 150px !important;
+  border-radius: 21px;
+  color: black;
+  box-shadow: 0px 0px 0px 2px silver;
+}
+.icons {
+  position: relative !important;
+  top: 6px !important;
+}
+.mainBox22 {
+  height: 50px !important;
+  padding-top: 3px !important;
+}
+.box21 {
+  /* border: 1px solid black; */
+}
+.box21 {
+  margin: 0px auto !important;
+}
+.logo {
+  width: 25px;
+  height: 25px;
+  position: relative;
+  border-radius: 25px;
+  top: 5px;
+  background: white;
+  right: 8px;
+}
+.mainbox2 {
+  color: black !important;
+  margin-top: 50px !important;
+}
+.repo {
+  position: relative !important;
+}
+.repoName {
+  font-size: 22px !important;
+  top: 11px;
+  margin-bottom: 8px !important;
+}
+.date {
+  position: absolute !important;
+  right: 4%;
+  top: 25px;
+  opacity: 0.7;
+}
+.repoDes {
+  margin-bottom: 10px !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.latest {
+  padding: 10px !important;
+  font-size: 30px !important;
+}
+.boxx {
+  margin: 10px;
+  background-color: white !important;
+  border-radius: 21px;
+  color: black;
+  transition: 1s !important;
+  box-shadow: 0px 0px 0px 2px silver;
+}
+.boxx:hover {
+  box-shadow: 0px 0px 0px 4px silver;
+  background-color: rgb(255, 255, 255) !important;
+  transition: 1s !important;
+  transition-duration: 1s !important;
+}
+.repo {
+  margin-top: 10px !important;
+  padding: 22px;
+  margin: 10px;
+  background: rgb(238, 238, 238);
+  border-radius: 14px;
+  color: black;
+}
+.back {
+  background-color: white !important;
+  color: black !important;
+}
+.imgBox {
+  width: 90px;
+  height: 90px;
+  border-radius: 70px;
+  margin: 30px;
+}
+.profile {
+  background-color: white !important;
+  /* color: black !important; */
+  margin-top: 19px !important;
+  height: 38px !important;
+  background-color: #325834 !important;
+
+  font-size: 13px !important;
+
+  border-radius: 10px !important ;
+  transition: 1s !important;
+}
+.profile:hover {
+  transition: 1s !important;
+  transition-duration: 1s !important;
+  border-radius: 0px !important;
+}
+.profileName {
+  text-transform: capitalize !important;
+}
+.box2 {
+  margin-top: 20px !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.name {
+  line-height: 30px !important;
+  font-weight: bold !important;
+  font-size: 16px !important;
+  text-transform: capitalize !important;
+}
+Copy code
+/* styles.css */
+.loader-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none !important;
+  justify-content: center !important;
+  align-items: center !important;
+  z-index: 9999 !important; /* Higher z-index to be on top of other content */
+}
+.logoo {
+  text-decoration: none !important;
+  color: white !important;
+  font-size: 20px !important;
+}
+.home {
+  position: relative !important;
+  left: -5% !important;
+  text-decoration: none !important;
+  float: right;
+  font-size: 18px;
+  top: 7px;
+  color: white !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.greenBox {
+  /* background: #325834 !important; */
+  padding-left: 56px !important;
+  padding: 16px;
+  position: relative;
+  left: -8px;
+  width: 101.2% !important;
+  top: -9px;
+  bottom: 10px;
+}
+.searchBar {
+  background-color: white !important;
+  border: 1px solid #325834 !important;
+  color: white !important;
+  font-weight: bold !important;
+  width: 33vw !important;
+  position: relative !important;
+  top: -8px !important;
+  height: 65px !important;
+  margin-top: 8px !important;
+  border-radius: 20px 0px 0px 20px !important;
+}
+.githubFinder {
+  background-color: #325834 !important;
+
+  box-shadow: 0 -6px 10px 5px rgba(255, 255, 255, 0.5) !important;
+  padding-left: 56px !important;
+  padding: 16px;
+  position: relative;
+  left: -8px;
+  width: 101.2%;
+  top: -9px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.text {
+  margin-bottom: 15px !important;
+  font-size: 20px !important;
 }
+::placeholder {
+  color: white !important;
+}
+.serchBut {
+  height: 66.6px !important;
+  width: 130px !important;
+  border-radius: 0px !important;
+  font-weight: bold !important;
+  background-color: #325834 !important;
+  border-top: 1px solid #325834 !important;
+  border-bottom: 1px solid #325834 !important;
+  border-right: 1px solid #325834 !important;
+  border-radius: 0px 20px 20px 0px !important;
+}
+.searchBar input {
+  position: absolute !important;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  font-weight: bold !important;
+  top: -4px !important;
 }
