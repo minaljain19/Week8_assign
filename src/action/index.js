@@ -1,7 +1,20 @@
 import axios from "axios";
 const API = "APII";
+const EMPTY = "EMPTY";
 const getData = "SETDATA";
 // const Remove="Remove"
+
+export const setEmpty = () => {
+  return async (dispatch) => {
+    try {
+      dispatch({
+        type: EMPTY,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+};
 export const sendData = (data) => {
   return async (dispatch) => {
     try {
@@ -31,7 +44,9 @@ export const sendData = (data) => {
 export const getItem = (name) => {
   return async (dispatch) => {
     try {
-      const ress = await axios.get(`https://api.github.com/search/users?q=${name}`);
+      const ress = await axios.get(
+        `https://api.github.com/search/users?q=${name}`
+      );
       const arr = [ress.data.items];
       const arrr = arr[0];
       const newData = arrr.filter((user) => user.login.includes(name));

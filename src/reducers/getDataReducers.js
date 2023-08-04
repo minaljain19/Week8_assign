@@ -1,24 +1,35 @@
-
+const setData = "SETDATA";
+const api = "APII";
+const empty = "EMPTY";
 const initialData = {
   selectedData: {},
   apiData: {},
-  repo:{}
+  repo: {},
 };
 
 const getDataReducers = (state = initialData, action) => {
   switch (action.type) {
-    case "SETDATA": {
+    case setData: {
       //   console.log("action.payload", action.payload);
       return {
         ...state,
         selectedData: action.payload,
       };
     }
-    case "APII": {
-      console.log("action.payload", action.payload.repo);
-         return {
+    case empty: {
+      //   console.log("action.payload", action.payload);
+      return {
         ...state,
-        repo:action.payload.repo,
+        selectedData: {},
+      };
+    }
+
+    case api: {
+      console.log("action.payload", action.payload.repo);
+      return {
+        ...state,
+        // selectedData: {},
+        repo: action.payload.repo,
         apiData: action.payload.data,
       };
     }

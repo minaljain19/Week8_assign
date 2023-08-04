@@ -1,6 +1,7 @@
 body {
   padding-bottom: 0px !important;
   margin-bottom: 0px;
+
   /* background: #325834 !important; */
 }
 .mainBox {
@@ -45,11 +46,11 @@ body {
 .linkRepo {
   display: contents !important;
 }
-.err{
-      margin: 0px auto !important; 
-    font-size: 25px !important;
-    margin-top: 49px !important;
-    font-weight: bold !important;
+.err {
+  margin: 0px auto !important;
+  font-size: 25px !important;
+  margin-top: 49px !important;
+  font-weight: bold !important;
 }
 .mainBox1 {
   /* margin: 0px auto !important; */
@@ -90,6 +91,7 @@ body {
 }
 .repo {
   position: relative !important;
+  box-shadow: 0 0 3px 0px hsla(0, 0%, 0%, 0.5) !important;
 }
 .repoName {
   font-size: 22px !important;
@@ -206,6 +208,8 @@ Copy code
   padding-left: 56px !important;
   padding: 16px;
   position: relative;
+
+  height: auto !important;
   left: -8px;
   width: 101.2% !important;
   top: -9px;
@@ -222,11 +226,15 @@ Copy code
   height: 65px !important;
   margin-top: 8px !important;
   border-radius: 20px 0px 0px 20px !important;
+  box-shadow: 0 0 8px 4px hsla(0, 0%, 84%, 0.5) !important;
+}
+.gitN {
+  font-size: 18px !important;
+  font-family: "Freehand", cursive !important;
 }
 .githubFinder {
   background-color: #325834 !important;
-
-  box-shadow: 0 -6px 10px 5px rgba(255, 255, 255, 0.5) !important;
+  box-shadow: 0 0 8px 4px hsla(0, 0%, 84%, 0.5) !important;
   padding-left: 56px !important;
   padding: 16px;
   position: relative;
@@ -241,10 +249,11 @@ Copy code
   font-size: 20px !important;
 }
 ::placeholder {
-  color: white !important;
+  color: black !important;
 }
 .serchBut {
   height: 66.6px !important;
+  box-shadow: 0 0 8px 4px hsla(0, 0%, 84%, 0.5) !important;
   width: 130px !important;
   border-radius: 0px !important;
   font-weight: bold !important;

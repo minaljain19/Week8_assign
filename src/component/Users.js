@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Grid from "@mui/material/Grid";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import { getItem, sendData } from "../action";
+import { getItem, sendData, setEmpty } from "../action";
 import "../App.css";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
@@ -15,7 +15,7 @@ import git from "../git.png";
 function Users(props) {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
-  const { getItem, sendData, selectedData, apiData } = props;
+  const { getItem, sendData, selectedData, apiData, setEmpty } = props;
   const [user, setUser] = useState("");
   function send(data) {
     sendData(data);
@@ -25,32 +25,26 @@ function Users(props) {
       navigate("/profile");
     }, 2300);
   }
+
   function handerName(e) {
     setUser(e.target.value);
   }
-  //   if(apiData?.login){
-  //     navigate("/profile")
-  //   }
+
   function submitData() {
     setLoading(true);
-
     setTimeout(() => {
       setLoading(false);
       getItem(user);
     }, 2000);
   }
-  console.log("user", user);
-  console.log("par api data", apiData);
-  console.log("my data", selectedData);
-  console.log("DF",selectedData.length)
 
-  // useEffect(()=>{
-  // getItem("RajashekarRaju");
-  // },[])
+  useEffect(() => {
+    setEmpty();
+  }, [user]);
   return (
     <>
       <Grid className="githubFinder">
-        <Typography>
+        <Typography className="gitN">
           {" "}
           <img src={git} className="logo" /> Github Finder
         </Typography>
@@ -82,18 +76,28 @@ function Users(props) {
           />
         )}
         <Grid container className="girdn" sm="12" md="12" xs="12">
-        {selectedData.length ==0?(  <Typography className="err">User Not Found</Typography>):<></> }
+          {selectedData.length == 0 ? (
+            <Typography className="err">User Not Found</Typography>
+          ) : (
+            <></>
+          )}
         </Grid>
         {Object.keys(selectedData).length != 0 ? (
           <Grid container className="girdn" sm="12" md="12" xs="12">
-            {selectedData.length >0 ? (
+            {selectedData.length > 0 ? (
               selectedData.map((data, index) => (
                 <Grid container className="boxx" sm="2.7" md="2.7">
                   <Grid sm="6" md="6" xs="6">
                     <img src={data.avatar_url} className="imgBox" />
                   </Grid>
                   <Grid sm="5" md="5" xs="6" className="box2">
-                    <Typography className="name">{data.login}</Typography>
+                    <Typography className="name">
+                      {data.login.length > 9 ? (
+                        <>{data.login.slice(0, 9) + "....."}</>
+                      ) : (
+                        <>{data.login}</>
+                      )}
+                    </Typography>
 
                     <Button
                       variant="contained"
@@ -137,6 +141,7 @@ const mapDispatchToProps = (dispatch) => {
     {
       getItem,
       sendData,
+      setEmpty,
     },
 
     dispatch

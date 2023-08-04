@@ -15,7 +15,6 @@ function App() {
     <Routes>
     <Route path="/" element={<Users />}></Route>
     <Route path="/profile" element={<Profile />}></Route>
-   
   </Routes>
   
   );
